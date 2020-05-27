@@ -2,5 +2,5 @@
 
 ### Contents
 Linux
-  - [YUM - Creationg a new repo and commands](https://sudharsantcm.github.io/Linux/RHEL/yum.html)
-  - [NFS - configuration](https://sudharsantcm.github.io/Linux/RHEL/nfs.html)
+  - [YUM - Creationg a new repo and commands](https://linuxcloudadmin.github.io/Linux/RHEL/yum.html)
+  - [NFS - configuration](https://linuxcloudadmin.github.io/Linux/RHEL/nfs.html)
