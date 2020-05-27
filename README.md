@@ -1,1 +1,4 @@
+---
+permalink: /
+---
 # linuxcloudadmin.githhub.io
