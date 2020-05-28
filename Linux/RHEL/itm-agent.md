@@ -1,7 +1,7 @@
 [Back to Homepage](https://linuxcloudadmin.github.io)
 
 ## ITM Agents
-- This sectio is for handling ITM monitoring agent, a product of IBM.
+- This section is for handling ITM monitoring agent, a product of IBM.
 
 - universal agent UM,  os agents ux and lz.
 
