@@ -67,7 +67,7 @@ save and close 
 ```
 
 - Add rules in Firewall.  
- 
+
 ```
 iptables -S         ## lists rules
   
