@@ -19,3 +19,5 @@ Linux
   - [Multipath Commands](https://linuxcloudadmin.github.io/Linux/RHEL/multipath-commands.html)
   - [Swap Addition](https://linuxcloudadmin.github.io/Linux/RHEL/swap-volume.html)
   - [GIT Commands](https://linuxcloudadmin.github.io/Linux/RHEL/git-commands.html)
+  - [rsyc](https://linuxcloudadmin.github.io/Linux/RHEL/rsync.html)
+  - [tcpdump](https://linuxcloudadmin.github.io/Linux/RHEL/tcpdump.html)
