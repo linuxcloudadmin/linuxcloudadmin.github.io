@@ -1,4 +1,4 @@
-# yum
+# yum (Yellowdog Updater, Modified)
 - This section covers installation and configuration of a loacal repository in a linux server.
 - Mount the OS image and under /media and copy all the packages.
 
