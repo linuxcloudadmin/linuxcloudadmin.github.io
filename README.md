@@ -2,7 +2,7 @@
 
 ### Contents
 Linux
-  - [YUM - Creationg a new repo and commands](https://linuxcloudadmin.github.io/Linux/RHEL/yum.html)
+  - [YUM - Creating new repository and commands](https://linuxcloudadmin.github.io/Linux/RHEL/yum.html)
   - [NFS - Configuration](https://linuxcloudadmin.github.io/Linux/RHEL/nfs.html)
   - [ILO and IDRAC commands](https://linuxcloudadmin.github.io/Linux/RHEL/ilo%20and%20idrac.html)
   - [Openssh](https://linuxcloudadmin.github.io/Linux/RHEL/openssh.html)
