@@ -1,4 +1,5 @@
 # yum
+- This section covers installation and configuration of a loacal repository in a linux server.
 - Mount the OS image and under /media and copy all the packages.
 
 ```
@@ -70,7 +71,7 @@ repo.linux1                                  �
 Metadata Cache Created 
 ```
 
-- Downgrade a package
+## Downgrade a package
 
 ```
 yum history                               ##check the serial no
@@ -78,7 +79,7 @@ yum history info <serial-no.>  |less      ##check the older package version
 yum downgrade <older-pkg-version>
 ```
 
-- Clean duplicate packages
+## Clean duplicate packages
 
 ```markdown
 - Check whether the package is installed,
@@ -91,13 +92,13 @@ yum downgrade <older-pkg-version>
 	package-cleanup --cleandupes   
 ```
 
--Last Installed packages
+## Last Installed packages
 
 ```
 rpm -qa --last |less
 ```
 
-- Local install
+## Local install
 
 ```markdown
 - To only download the packages,
@@ -107,7 +108,7 @@ rpm -qa --last |less
 		yum localinstall <pkg-name>
  ```
  
-- yum commands
+## More yum commands
 
 ```
 yum install <packagename>                                                                
