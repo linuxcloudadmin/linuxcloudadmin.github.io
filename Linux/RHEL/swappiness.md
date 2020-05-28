@@ -18,7 +18,7 @@
 - Default value is 60. When the value is 60, after 40 percent of RAM usage, swap will be used.
 
 ```
-cat /proc/sys/vm/swappiness	            ##displays swappiness value. Default value is 60
+cat /proc/sys/vm/swappiness             ##displays swappiness value. Default value is 60
 
 echo 10 > /proc/sys/vm/swappiness       ##sets swappiness on the fly
 
