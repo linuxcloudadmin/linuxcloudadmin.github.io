@@ -11,7 +11,7 @@ encrypted http data. 
 - The web server decrypts the symmetric encryption key using its private key and uses the symmetric key to decrypt the URL and http data.  
 - The web server sends back the requested html document and http data encrypted with the symmetric key.  
 - The browser decrypts the http data and html document using the symmetric key and displays the information. 
-  
+
 ### Private Key/Public Key
 
 - The encryption using a private key/public key pair ensures that the data can be encrypted by one key but can only be decrypted by the other key pair.  
