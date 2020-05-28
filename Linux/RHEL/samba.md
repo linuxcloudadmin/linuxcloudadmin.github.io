@@ -1,7 +1,7 @@
 ## Samba - Installing and Configuring Samba server
 
 - This section covers Installation and configuration of Samba server.
-- The packages required.
+- Install the below packages in the server side.
 
 ```
 server side : 
@@ -55,12 +55,12 @@ microsoft-ds    445/udp 
 - Allow SElinux booleans that are required.
 
 ```
-chcon -R -t samba_share_t /sharedata 
+#chcon -R -t samba_share_t /sharedata 
  
-setsebool -P samba_enable_home_dirs on                       ##Enables the sharing of home directories 
-setsebool -P samba_export_all_ro on                          ##Enable read-only access to any directory 
-setsebool -P samba_export_all_rw on                          ##Sets up read/write access to any directory 
-samba_share_t <default_folder>                               ## which Samba can share 
+#setsebool -P samba_enable_home_dirs on                       ##Enables the sharing of home directories 
+#setsebool -P samba_export_all_ro on                          ##Enable read-only access to any directory 
+#setsebool -P samba_export_all_rw on                          ##Sets up read/write access to any directory 
+#samba_share_t <default_folder>                               ## which Samba can share 
 ```
 
 - Add users to OS and to samba database.
@@ -93,6 +93,7 @@ root@linux1 suda]# service smb reload 
 Reloading smb.conf file:                                   [  OK  ] 
 ```
 
+- Command **smbstatus** shows the connection and shares shared from the server.
 - In client machine, install the below packages.
 
 ```
@@ -104,8 +105,8 @@ samba-client-3.5.10-114.el6.i686
 - check connection from client server.
   
  ```
-[root@linux2 smbmount]# smbclient -L 192.168.2.2 -U samuser1                //-L netbios i.e., server ip addr and -U username added in smbpasswd 
-Enter samuser1's password: 
+[root@linux2 smbmount]# smbclient -L 192.168.2.2 -U user1                ##L netbios i.e., server ip addr and -U username added in smbpasswd 
+Enter user1's password: 
 Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.10-114.el6] 
   
         Sharename       Type      Comment 
@@ -114,7 +115,7 @@ Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.10-114.el6] 
         Fax:3           Printer   Fax 
         Microsoft_XPS_Document_Writer:2 Printer   Microsoft XPS Document Writer 
         Send_To_OneNote_2010:1 Printer   Send To OneNote 2010 
-        samuser1        Disk      Home Directories 
+        user1           Disk      Home Directories 
 Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.10-114.el6] 
   
         Server               Comment 
@@ -145,12 +146,12 @@ mount: cannot mount block device //192.168.2.2/home/samuser1 read-only 
    path = /suda 
 ```
 
-- user access can be limited by specifying only valid or invalid users, and by using valid user group name to permit only users in this group. 
+- User access can be limited by specifying only valid or invalid users, and by using valid user group name to permit only users in this group. 
 
 ```
- more options: 
-   read only = no 
-   public = yes 
-   invalid users = users1 
-   validusers = @group1, users1 
+more options: 
+  read only = no 
+  public = yes 
+  invalid users = users1 
+  validusers = @group1, users1 
 ```  
