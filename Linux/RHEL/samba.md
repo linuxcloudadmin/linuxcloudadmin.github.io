@@ -1,3 +1,5 @@
+[Back to Homepage](https://linuxcloudadmin.github.io)
+
 ## Samba - Installing and Configuring Samba server
 
 - This section covers Installation and configuration of Samba server.
@@ -155,3 +157,5 @@ more options: 
   invalid users = users1 
   validusers = @group1, users1  
 ```
+
+[Back to Homepage](https://linuxcloudadmin.github.io)
