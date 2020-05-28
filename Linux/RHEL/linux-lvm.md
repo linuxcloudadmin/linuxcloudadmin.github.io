@@ -147,7 +147,7 @@ pvdisplay -m  
 ```
 vgdisplay -v 
 ```
-  
+
 - Corrupting a superblock 
 
 ```
@@ -157,32 +157,16 @@ vgdisplay -v
 # fsck –b <superblock>  /dev/snapvg/lv1 
 ```
 
-- SNAPSHOT 
-	• Taking snapshot of a existing LV 
+- Taking snapshot of a existing LV
+
+```
 lvcreate -L 10G -s -n <snapshotname>  <lvpathname>        -s creates snapshot volume, create snapshot as same size as the FS 
-	• extend snap shot using lvextend 
-	• Merge snapshot with FS using 
-lvconvert --merge <lvpathname> 
-	• To extend snapshot automatically put entry in /etc/lvm/lvm.conf 
- 
- 
-creating thin pool 
- 
-lvcreate -L 10G --thinpool <lvname> <vgname> 
- 
-lvcreate -V 5G --thin -n volumename MB 
- 
- 
- 
-Raid1 and vgcfgrestore 
+```
+- We can also extend snap shot using lvextend command.
+- Merge snapshot with FS using 
 
+```
+lvconvert --merge <lvpathname>
+```
 
-
-
-Error:
-root@segotl2443# lvextend -L +2G /dev/mapper/rootvg-rootvol          //It is due to rootlv is 100% full
-  Couldn't create temporary archive name.
-
-
-lvextend -An -L +2G /dev/mapper/rootvg-rootvol            //use this to avoid taking backup in /etc/lvm/archive
-vgcfgbackup -v rootvg                           // Take back up manually after that
+- To extend snapshot automatically put entry in /etc/lvm/lvm.conf
