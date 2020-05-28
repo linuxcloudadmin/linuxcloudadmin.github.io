@@ -1,3 +1,5 @@
+[Back to Homepage](https://linuxcloudadmin.github.io)
+
 ## Open ssh
 
 - check whether openssh packages are installed.If not install **openssh-server** and **openssh-clients** package
@@ -130,3 +132,6 @@ chkconfig httpd on
 cd /var/www/html
 echo "<html><h1>Welcome to the EC2 Fleet!</h1></html>" > index.html
 ```
+
+
+[Back to Homepage](https://linuxcloudadmin.github.io)
