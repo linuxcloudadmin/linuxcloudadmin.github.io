@@ -1,3 +1,5 @@
+[Back to Homepage](https://linuxcloudadmin.github.io)
+
 # yum (Yellowdog Updater, Modified)
 - This section covers installation and configuration of a local repository in a linux server.
 - Mount the OS image and under /media and copy all the packages.
@@ -129,3 +131,6 @@ yum –enablerepo=repo1 install <package>     ##to install from a specific r
 yum makecache fast
 yum whatprovides /usr/bin/ssh
 ```
+
+
+[Back to Homepage](https://linuxcloudadmin.github.io)
