@@ -92,7 +92,7 @@ hosts allow = 127. 192.168.12. 192.168.13. 
 root@linux1 suda]# service smb reload 
 Reloading smb.conf file:                                   [  OK  ] 
 ```
-  
+
 - In client machine, install the below packages.
 
 ```
@@ -100,7 +100,7 @@ samba-common.i686 0:3.5.10-114.el6 
 samba-winbind.i686 0:3.5.10-114.el6 
 samba-client-3.5.10-114.el6.i686
 ```
-    
+
 - check connection from client server.
   
  ```
@@ -126,16 +126,16 @@ Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.10-114.el6] 
         ---------            ------- 
         MYGROUP              LINUX1 
 [root@linux2 smbmount]# 
-```  
-  
+```
+
 - cifs-utils.i686 should be installed on client to avoid the below error. 
   
 ```
 [root@linux2 /]# mount -t cifs //192.168.2.2/home/samuser1 smbmount -o username=samuser1 
 mount: block device //192.168.2.2/home/samuser1 is write-protected, mounting read-only 
 mount: cannot mount block device //192.168.2.2/home/samuser1 read-only 
-```  
-  
+```
+
 - Mention the share name specified in smb.configure i.e.,[suda] 
 
 ```
@@ -144,7 +144,7 @@ mount: cannot mount block device //192.168.2.2/home/samuser1 read-only 
    writable = yes 
    path = /suda 
 ```
-    
+
 - user access can be limited by specifying only valid or invalid users, and by using valid user group name to permit only users in this group. 
 
 ```
