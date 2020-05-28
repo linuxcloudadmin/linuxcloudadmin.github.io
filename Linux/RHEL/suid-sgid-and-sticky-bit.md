@@ -5,6 +5,8 @@
 - SUID is set to give the permission as the owner to any user who runs the file.  This is given only to files.  
 
 ```
+Command:
+
 # chmod u+s [file-name]
 # chmod 4555 [file-name]
 
@@ -18,6 +20,8 @@ eg:
 - It is used when multiple users share a single dir to create files and access it.  
 
 ```
+Command:
+
 chmod g+s file1 
 chmod 2555 [directory]
 
@@ -31,6 +35,8 @@ eg:
 - To over come this setting sticky bit provides a quick solution of providing permission only to the owner of the file to remove the file, and provides permission  to others to access or modify it.  
 		
 ```
+Command:
+
 chmod o+t file1 
 chmod 1777 [directory]
 
