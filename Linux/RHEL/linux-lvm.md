@@ -11,6 +11,8 @@ cd /sys/class/scsi_disk 
 echo "- - -">/sys/class/scsi_host/host2/scan
 ```
 
+- We can also use **lvmdiskscan** which lists devices that may be used as physical volumes. It scans  all  SCSI, (E)IDE disks, multiple devices and a bunch of other block devices in the system looking for LVM PVs.
+
 - To delete a device.
 
 ```
