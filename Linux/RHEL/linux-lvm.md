@@ -54,15 +54,6 @@ tmpfs                           504M     0  504M   0% /de
 .host:/                          84G   50G   35G  59% /mnt/hgfs 
 /dev/mapper/samplevg-svglv1     194M  5.6M  179M   3% /svglv1 
 ```
-
-Error:
-root@segotl2443# lvextend -L +2G /dev/mapper/rootvg-rootvol          //It is due to rootlv is 100% full
-  Couldn't create temporary archive name.
-
-
-lvextend -An -L +2G /dev/mapper/rootvg-rootvol            //use this to avoid taking backup in /etc/lvm/archive
-vgcfgbackup -v rootvg                           // Take back up manually after that
- 
  
 - Reducing a FS. We need to unmount the FS before reducing. xfs filesystem cannot be reduced.
 
@@ -95,8 +86,8 @@ tmpfs                             504M     0  504M   0% /
 .host:/                            84G   50G   35G  59% /mnt/hgfs 
 /dev/mapper/samplevg-svglv1       146M  5.6M  133M   5% /svglv1 
 [root@linux1 ~]# 
-``` 
- 
+```
+
 - Removing a logical volume. unmount the FS and run below commands.
 
 ```
@@ -121,8 +112,9 @@ Do you really want to remove active logical volume svglv1? [y/n]: y 
   /dev/sdb   sample2vg lvm2 a--  2.00g 1.93g 
   /dev/sdc   samplevg  lvm2 a--  3.00g 2.85g 
   /dev/sdd             lvm2 a--  2.00g 2.00g 
-  /dev/sde   sample2vg lvm2 a--  3.00g 3.00g 
- 
+  /dev/sde   sample2vg lvm2 a--  3.00g 3.00g
+```
+
 - Adding a disk to VG.
 
 ```
@@ -131,20 +123,30 @@ Do you really want to remove active logical volume svglv1? [y/n]: y 
   Volume group "sample2vg" successfully extended 
 ```
 
-[root@linux1 s2vglv1]# pvs 
-  PV         VG        Fmt  Attr PSize PFree 
-  /dev/sdb   sample2vg lvm2 a--  2.00g 1.93g 
-  /dev/sdc   samplevg  lvm2 a--  3.00g 2.85g 
-  /dev/sdd   sample2vg lvm2 a--  2.00g 2.00g 
-  /dev/sde   sample2vg lvm2 a--  3.00g 3.00g 
-  
+- Renaming a VG. unmount all file systems in the VG and run below command.
+
+```
 [root@linux1 archive]# vgrename samplevg sample1vg 
   Volume group "samplevg" successfully renamed to "sample1vg"
- 
- 
+```
+
+- Renaming a lv.
+
+```
+[root@linux1 archive]# lvrename /dev/vgname/old-lvname /dev/vgname/new-lvname
+```
+
+- To display the logical volume present in a physical disk.
+
+```
 pvdisplay -m //lvs in a pvdisplay 
-vgdisplay -v //lv's and pv's in a vg 
- 
+```
+
+- To display logical volume and physical volume in a VG.
+
+```
+vgdisplay -v //lv's and pv's in a vg
+```
  
  
  
@@ -175,3 +177,14 @@ lvcreate -V 5G --thin -n volumename MB 
  
  
 Raid1 and vgcfgrestore 
+
+
+
+
+Error:
+root@segotl2443# lvextend -L +2G /dev/mapper/rootvg-rootvol          //It is due to rootlv is 100% full
+  Couldn't create temporary archive name.
+
+
+lvextend -An -L +2G /dev/mapper/rootvg-rootvol            //use this to avoid taking backup in /etc/lvm/archive
+vgcfgbackup -v rootvg                           // Take back up manually after that
