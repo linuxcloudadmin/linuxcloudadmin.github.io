@@ -9,3 +9,6 @@ Linux
   - [Samba Configuration](https://linuxcloudadmin.github.io/Linux/RHEL/samba.html)
   - [iptables - Basic commands](https://linuxcloudadmin.github.io/Linux/RHEL/iptables.html)
   - [LVM Commands](https://linuxcloudadmin.github.io/Linux/RHEL/linux-lvm.html)
+  - [Performance Tools](https://linuxcloudadmin.github.io/Linux/RHEL/performance-tools.html)
+  - [SUID, SGID, Sticky Bit](https://linuxcloudadmin.github.io/Linux/RHEL/suid-sgid-and-sticky-bit.html)
+  - [Hardware Commands](https://linuxcloudadmin.github.io/Linux/RHEL/hardware-commands.html)
