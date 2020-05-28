@@ -54,7 +54,7 @@ tmpfs                           504M     0  504M   0% /de
 .host:/                          84G   50G   35G  59% /mnt/hgfs 
 /dev/mapper/samplevg-svglv1     194M  5.6M  179M   3% /svglv1 
 ```
- 
+
 - Reducing a FS. We need to unmount the FS before reducing. xfs filesystem cannot be reduced.
 
 ``` 
@@ -123,14 +123,14 @@ Do you really want to remove active logical volume svglv1? [y/n]: y 
   Volume group "sample2vg" successfully extended 
 ```
 
-- Renaming a VG. unmount all file systems in the VG and run below command.
+- Renaming a Volume group. unmount all file systems in the VG and run below command.
 
 ```
 [root@linux1 archive]# vgrename samplevg sample1vg 
   Volume group "samplevg" successfully renamed to "sample1vg"
 ```
 
-- Renaming a lv.
+- Renaming a logical volume.
 
 ```
 [root@linux1 archive]# lvrename /dev/vgname/old-lvname /dev/vgname/new-lvname
@@ -139,27 +139,25 @@ Do you really want to remove active logical volume svglv1? [y/n]: y 
 - To display the logical volume present in a physical disk.
 
 ```
-pvdisplay -m //lvs in a pvdisplay 
+pvdisplay -m  
 ```
 
 - To display logical volume and physical volume in a VG.
 
 ```
-vgdisplay -v //lv's and pv's in a vg
+vgdisplay -v 
 ```
- 
- 
- 
-Corrupting a superblock 
+  
+- Corrupting a superblock 
 
-# dumpe2fs  <lvpath>                                                         //lists superblock 
-# dd  if=/dev/zero count=1 bs=4096 of=/dev/<FS to corrupt>   //removes first super block. 
-# e2fsck <lvpath>                                                                              //run fsck interactively 
+```
+# dumpe2fs  <lvpath>                                           ##lists superblock 
+# dd  if=/dev/zero count=1 bs=4096 of=/dev/<FS to corrupt>     ##removes first super block. 
+# e2fsck <lvpath>                                              ##run fsck interactively 
 # fsck –b <superblock>  /dev/snapvg/lv1 
- 
- 
- 
-SNAPSHOT 
+```
+
+- SNAPSHOT 
 	• Taking snapshot of a existing LV 
 lvcreate -L 10G -s -n <snapshotname>  <lvpathname>        -s creates snapshot volume, create snapshot as same size as the FS 
 	• extend snap shot using lvextend 
