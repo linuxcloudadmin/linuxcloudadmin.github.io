@@ -2,7 +2,7 @@
 
 ## Swappiness
 
-- Swappiness is the value with which we can configure the amount of swap memory that should be used.
+- Swappiness is the value with which we can configure how much and how often Linux kernel should swap.
 - Why the SWAP is not utilized though normal usage + Memory with file system cache crossed 90%. Can you please explain us little more in detail ?
 
 > In linux, any unused resource means a wasted resource. So OS will try to use the resources to the fullest. That is the reason free memory is used for caching purpose. In this server, Swap will be used only when 90% of memory is used by the processes as per the configuration. The FS cache usage is not taken into account as memory usage because, it is not allocated for any process, the FS cache is used by the OS only, which will be released and reused whenever memory  is needed. 
