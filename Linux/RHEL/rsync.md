@@ -13,3 +13,6 @@ rsync -avrtzhp --progress --exclude 'child-dir1' --exclude 'dir1' /source/dir/ /
 -a archive mode, -v  verbose, -r recursive, -t preserve modification time, -z compress, -h human readable form, -p preserve permissions
 --exclude prevents the directory 'child-dir1' and 'dir1' present under /source/dir/ from copying
 ```
+
+
+[Back to Homepage](https://linuxcloudadmin.github.io)
