@@ -20,9 +20,10 @@ git commit -m "specify changes done here" file-name.txt
 ```
 
 - Push file to git master.
+- Push the branch to <remote>, along with necessary commits and objects. Creates named branch in the remote repo if it doesn’t exist.
 
 ```
-git push origin master
+git push <remote> <branch>
 ```
 
 - Shows changes done to the file.
