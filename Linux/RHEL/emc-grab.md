@@ -1,6 +1,7 @@
 [Back to Homepage](https://linuxcloudadmin.github.io)
 
 ## EMCgrab
+- EMCgrab is a utility that is run locally on each host and gathers storage-specific information (driver version, storage-technical details, etc).
 - When we face issue while using EMC SAN storage, EMC will ask for emc grab. Below is the steps to run emc grab.
 
 ```
