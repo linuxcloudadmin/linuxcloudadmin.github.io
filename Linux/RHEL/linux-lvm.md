@@ -3,6 +3,7 @@
 ## Linux LVM
 - This section covers the linux lvm commands.
 - For scanning newly added disks or devices. This makes the disk visible to linux OS.
+- "- - -" The three values stand for channel, SCSI target ID, and LUN. The dashes act as wildcards meaning "rescan everything".
 
 ```
 cd /sys/class/block 
