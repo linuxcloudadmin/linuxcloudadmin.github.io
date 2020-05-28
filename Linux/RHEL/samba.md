@@ -104,7 +104,7 @@ samba-client-3.5.10-114.el6.i686
 
 - check connection from client server.
   
- ```
+```
 [root@linux2 smbmount]# smbclient -L 192.168.2.2 -U user1                ##L netbios i.e., server ip addr and -U username added in smbpasswd 
 Enter user1's password: 
 Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.10-114.el6] 
@@ -153,5 +153,5 @@ more options: 
   read only = no 
   public = yes 
   invalid users = users1 
-  validusers = @group1, users1 
-```  
+  validusers = @group1, users1  
+```
