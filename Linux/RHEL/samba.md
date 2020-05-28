@@ -116,7 +116,7 @@ Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.10-114.el6] 
         Microsoft_XPS_Document_Writer:2 Printer   Microsoft XPS Document Writer 
         Send_To_OneNote_2010:1 Printer   Send To OneNote 2010 
         user1           Disk      Home Directories 
-Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.10-114.el6] 
+        Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.10-114.el6] 
   
         Server               Comment 
         ---------            ------- 
@@ -129,8 +129,8 @@ Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.10-114.el6] 
 [root@linux2 smbmount]# 
 ```
 
-- cifs-utils.i686 should be installed on client to avoid the below error. 
-  
+- cifs-utils.i686 should be installed on client to avoid the below error.
+
 ```
 [root@linux2 /]# mount -t cifs //192.168.2.2/home/samuser1 smbmount -o username=samuser1 
 mount: block device //192.168.2.2/home/samuser1 is write-protected, mounting read-only 
