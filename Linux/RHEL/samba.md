@@ -70,7 +70,7 @@ useradd user1
 passwd user1
 smbpasswd -a user1  ##can be used to add a user to the password database under /etc/samba/ for SAMBA authentication
 groupadd sambagrp
-usermog -G sambagrp user1
+usermod -G sambagrp user1
 ```
 
 - Confirm workgroup in /etc/samba/smb.conf (# and ; disables entry in smb.conf). command **testparam** tests errors in smb.conf.
@@ -102,7 +102,7 @@ samba-winbind.i686 0:3.5.10-114.el6 
 samba-client-3.5.10-114.el6.i686
 ```
 
-- check connection from client server.
+- Check connection from client server.
 
 ```
 [root@linux2 smbmount]# smbclient -L 192.168.2.2 -U user1                ##L netbios i.e., server ip addr and -U username added in smbpasswd 
