@@ -1,6 +1,5 @@
-## Welcome to my Linux and Cloud Blog
+## Contents
 
-### Contents
 ### Linux
   - [YUM - Creating new repository and commands](https://linuxcloudadmin.github.io/Linux/RHEL/yum.html)
   - [NFS - Configuration](https://linuxcloudadmin.github.io/Linux/RHEL/nfs.html)
