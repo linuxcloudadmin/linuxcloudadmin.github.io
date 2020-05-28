@@ -1,3 +1,5 @@
+[Back to Homepage](https://linuxcloudadmin.github.io)
+
 ## Linux LVM
 - This section covers the linux lvm commands.
 - For scanning newly added disks or devices. This makes the disk visible to linux OS.
@@ -170,3 +172,6 @@ lvconvert --merge <lvpathname>
 ```
 
 - To extend snapshot automatically put entry in /etc/lvm/lvm.conf
+
+
+[Back to Homepage](https://linuxcloudadmin.github.io)
