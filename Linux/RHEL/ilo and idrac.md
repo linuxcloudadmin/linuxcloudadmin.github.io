@@ -1,3 +1,5 @@
+[Back to Homepage](https://linuxcloudadmin.github.io)
+
 ## HP ILO
 
 - To print HP ILO IP,
@@ -79,3 +81,6 @@ ipmitool user set password 6 <password>
 
 Default idrac password -- root /calvin
 ```
+
+
+[Back to Homepage](https://linuxcloudadmin.github.io)
