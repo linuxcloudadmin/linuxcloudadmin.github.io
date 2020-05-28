@@ -1,3 +1,5 @@
+[Back to Homepage](https://linuxcloudadmin.github.io)
+
 ## NFS - Installing and configuring new NFS server
 - This section covers installing and configuring a NFS in a centos 6 server.
 - For nfs, portmap or rpcbind should be running for allocating ports required by remote procedure call.
@@ -104,3 +106,6 @@ iptables -S         ## lists rules
 
 #showmount -e
 ```
+
+
+[Back to Homepage](https://linuxcloudadmin.github.io)
