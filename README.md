@@ -25,6 +25,7 @@
   - [GIT Commands](https://linuxcloudadmin.github.io/Linux/RHEL/git-commands.html)
   - [rsyc](https://linuxcloudadmin.github.io/Linux/RHEL/rsync.html)
   - [tcpdump](https://linuxcloudadmin.github.io/Linux/RHEL/tcpdump.html)
+  - [locate command](https://linuxcloudadmin.github.io/Linux/RHEL/locate.html)
 
 
 > ## General Tech
