@@ -22,5 +22,13 @@ encrypted http data. 
 - In the opposite,  you can certify that a message is only coming from you, because you have encrypted it with you private key, and only the associated public key will decrypt it  
 correctly. Beware, in this case the message is not secured you have only signed it. Everybody has the public key, remember! 
 
+## Certificates
+
+- How do you know that you are dealing with the right person or rather the right web site ? Well, someone has taken great length (if they are serious) to ensure that the web site owners are who they claim to be. 
+- This someone, you have to implicitly trust: you have his/her certificate loaded in your browser (a root Certificate). 
+- A certificate, contains information about the owner of the certificate, like e-mail address, owner's name, certificate usage, duration of validity, resource location or Distinguished Name (DN) which includes the Common Name (CN) (web site address or e-mail address depending of the usage) and the certificate ID of the person who certifies (signs) this information. 
+- It contains also the public key and finally a hash to ensure that the certificate has not been tampered with. As you made the choice to trust the person who signs this certificate, therefore you also trust this certificate. This is a certificate trust tree or certificate path. Usually your browser or application has already loaded the root certificate of well known Certification Authorities (CA) or root CA Certificates. 
+- The CA maintains a list of all signed certificates as well as a list of revoked certificates. A certificate is insecure until it is signed, as only a signed certificate cannot be modified. You can sign a certificate using itself, it is called a self signed certificate. All root CA certificates are self signed.
+
 
 [Back to Homepage](https://linuxcloudadmin.github.io)
