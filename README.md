@@ -1,5 +1,3 @@
-## Contents
-
 ## Linux Administration
 ### Network Administration
   
