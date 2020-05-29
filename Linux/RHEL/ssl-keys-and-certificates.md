@@ -2,7 +2,7 @@
 
 ## SSL Keys and Certificate
 
-- A browser requests a secure page (usually https://).  
+- A browser requests a secure page (usually https://) from a web server.  
 - The web server sends its public key with its certificate (contains certificate holder, issuer, expiry details, public key, digital signature). 
 - The browser checks that the certificate was issued by a trusted party (usually a trusted root CA), that the certificate is still valid and that the certificate  
 is related to the site contacted. 
