@@ -1,13 +1,13 @@
 ## Contents
 
-> ## Linux Administration
-> #### Network Administration
+## Linux Administration
+### Network Administration
   
   - [Samba Configuration](https://linuxcloudadmin.github.io/Linux/RHEL/samba.html)
   - [NFS - Configuration](https://linuxcloudadmin.github.io/Linux/RHEL/nfs.html)
   - [Openssh](https://linuxcloudadmin.github.io/Linux/RHEL/openssh.html)
 
-> #### Basics
+### Basics
 
   - [YUM Package Management](https://linuxcloudadmin.github.io/Linux/RHEL/yum.html)
   - [ILO and IDRAC commands](https://linuxcloudadmin.github.io/Linux/RHEL/ilo%20and%20idrac.html) 
@@ -27,7 +27,6 @@
   - [tcpdump](https://linuxcloudadmin.github.io/Linux/RHEL/tcpdump.html)
   - [locate command](https://linuxcloudadmin.github.io/Linux/RHEL/locate.html)
 
-
-> ## General Tech
+## General Tech
 
   - [SSL Keys and Certificates](https://linuxcloudadmin.github.io/Linux/RHEL/ssl-keys-and-certificates.html)
